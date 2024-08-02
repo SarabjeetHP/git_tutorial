@@ -1,14 +1,12 @@
 $(document).ready(function () {
-  console.log("document loaded");
-});
+  $("#form").submit(function (event) {
+    event.preventDefault();
 
-$(window).on("load", function () {
-  console.log("window loaded");
-});
-
-// window.onload = function () {
-//   alert("Lets Test");
-// };
-$(document).ready(function () {
-  alert("Lets Test Jquery");
+    if ($("#email").val() === "") {
+      alert("Email is required");
+      return;
+    }
+    alert("Success");
+    form.reset();
+  });
 });
