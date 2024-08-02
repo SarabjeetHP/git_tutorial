@@ -6,6 +6,23 @@ $(document).ready(function () {
       alert("Email is required");
       return;
     }
+
+    if ($("#Password").val() !== $("#CP").val()) {
+      alert("error");
+      return;
+    }
+
+    // if ($("#checkbox").isChecked) {
+    //   alert("checked");
+    //   return;
+    // }
+    //check
+
+    if (!$("#checkbox").is(":checked")) {
+      alert("You must agree to the terms and conditions.");
+      return;
+    }
+
     alert("Success");
     form.reset();
 
