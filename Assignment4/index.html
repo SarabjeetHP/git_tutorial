@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox Example</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <label for="manage-permission">Manage Permission</label>
+        <select name="manage-permission" id="manage-permission">
+          <option value="">Select an option</option>
+          <option value="property">Property</option>
+          <option value="testimonial">Testimonial</option>
+          <option value="users">Users</option>
+          <option value="membership">Membership</option>
+        </select>
+      </div>
+
+      <div id="property-list" class="hidden">
+        <input
+          type="checkbox"
+          id="parent-property"
+          onclick="toggleChildren(this)"
+        />
+        <label for="parent-property">Property</label>
+        <div style="margin-left: 20px">
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child1">Edit Property</label><br />
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child2">Remove Property</label><br />
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child3">Add Property</label>
+        </div>
+      </div>
+
+      <div id="testimonial-list" class="hidden">
+        <input
+          type="checkbox"
+          id="parent-testimonial"
+          onclick="toggleChildren(this)"
+        />
+        <label for="parent-testimonial">Testimonial</label>
+        <div style="margin-left: 20px">
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child1">Add</label><br />
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child2">Remove</label><br />
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child3">View</label><br />
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child3">Edit</label>
+        </div>
+      </div>
+
+      <div id="users-list" class="hidden">
+        <input
+          type="checkbox"
+          id="parent-users"
+          onclick="toggleChildren(this)"
+        />
+        <label for="parent-users">Users</label>
+        <div style="margin-left: 20px">
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child1">Edit User</label><br />
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child2">View User</label><br />
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child3">Add User</label>
+        </div>
+      </div>
+
+      <div id="membership-list" class="hidden">
+        <input
+          type="checkbox"
+          id="parent-membership"
+          onclick="toggleChildren(this)"
+        />
+        <label for="parent-membership">Membership</label>
+        <div style="margin-left: 20px">
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child1">Edit Membership</label><br />
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child2">Remove Membership</label><br />
+          <input type="checkbox" class="child" onclick="checkParent()" />
+          <label for="child3">Add Membership</label>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
