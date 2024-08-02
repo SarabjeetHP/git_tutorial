@@ -8,5 +8,7 @@ $(document).ready(function () {
     }
     alert("Success");
     form.reset();
+
+    console.log("Form Submitted Successfully");
   });
 });
