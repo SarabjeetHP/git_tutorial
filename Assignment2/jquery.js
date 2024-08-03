@@ -12,12 +12,6 @@ $(document).ready(function () {
       return;
     }
 
-    // if ($("#checkbox").isChecked) {
-    //   alert("checked");
-    //   return;
-    // }
-    //check
-
     if (!$("#checkbox").is(":checked")) {
       alert("You must agree to the terms and conditions.");
       return;
