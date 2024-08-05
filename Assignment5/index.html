@@ -4,21 +4,103 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 5</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+
+      #container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 20px 60px rgba(0.1, 0.1, 0.1, 0.1);
+        max-width: 600px;
+        margin: auto;
+      }
+
+      #add-another {
+        box-shadow: 0 20px 60px rgba(0.1, 0.1, 0.1, 0.1);
+        position: fixed;
+        background-color: lightslategray;
+        color: white;
+        border: 0px;
+        padding: 28px 25px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        left: 120px;
+        top: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #add-another:hover {
+        background-color: darkgray;
+      }
+
+      .browser-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .browser-container input[type="file"] {
+        padding: 5px;
+      }
+
+      .browser-container select {
+        margin-left: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .remove-link {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        margin-left: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .remove-link:hover {
+        background-color: #c82333;
+      }
+
+      .image-preview {
+        max-width: 61px;
+        max-height: 130px;
+        display: none;
+        margin-left: -374px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 1px;
+        background-color: #fff;
+        margin-top: 5px;
+      }
+    </style>
   </head>
   <body>
-    <div id="container">
-      <div class="browser-container">
-        <input type="file" accept="image/*" />
-        <select class="image-type">
-          <option value="primary">Primary Image</option>
-          <option value="secondary">Secondary Image</option>
-        </select>
-        <span class="remove-link">Remove</span>
+    <center>
+      <div id="container">
+        <button id="add-another">Add</button><br /><br />
+        <div class="browser-container">
+          <input type="file" accept="image/*" class="file-input" />
+          <select class="image-type">
+            <option value="primary">Primary Image</option>
+            <option value="secondary" selected>Secondary Image</option>
+          </select>
+          <button class="remove-link">Remove</button>
+          <img src="" class="image-preview" />
+        </div>
       </div>
-    </div>
-    <br />
-    <button id="add-another">Add Another</button>
-
-    <script src="./index.js"></script>
+      <br />
+      <script src="./index.js"></script>
+    </center>
   </body>
 </html>
